@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <div class="nav-img d-flex justify-content-center align-items-center">
+          <img src="images/logo.png" alt="" />
+          <div class="nav-caption ms-3">
+            <a class="navbar-brand" href="#">Weather</a>
+            <span class="d-block">tagline goes here</span>
+          </div>
+        </div>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item m-auto">
+              <a
+                class="nav-link px-3 active py-0 text-white"
+                aria-current="page"
+                href="#"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item m-auto">
+              <a
+                class="nav-link px-3 py-0 text-white"
+                aria-current="page"
+                href="#"
+                >News</a
+              >
+            </li>
+            <li class="nav-item m-auto">
+              <a
+                class="nav-link px-3 py-0 text-white"
+                aria-current="page"
+                href="#"
+                >Live Cameras</a
+              >
+            </li>
+            <li class="nav-item m-auto">
+              <a
+                class="nav-link px-3 py-0 text-white"
+                aria-current="page"
+                href="#"
+                >Photos</a
+              >
+            </li>
+            <li class="nav-item m-auto">
+              <a
+                class="nav-link px-3 py-0 text-white"
+                aria-current="page"
+                href="#"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="form position-relative">
+      <div class="image">
+        <div class="container">
+          <div class="body-form">
+            <input type="text" placeholder="Find Your Location..." id="findLocation" />
+            <button id="findBtn">Find</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="weather">
+        <div class="weather-table">
+          <div class="container">
+            <div class="row gx-0">
+              <div class="col-lg-4">
+                <div class="today-weather" id="todayWeather">
+                  <div
+                    class="today-wether-header d-flex justify-content-between align-items-center px-3 py-2"
+                  >
+                    <span id="currentDay"> </span>
+                    <span id="currentDate"></span>
+                  </div>
+                  <div class="today-weather-body px-3 py-4">
+                    <p id="currentCity"></p>
+                    <h1 class="text-white" id="currentTemp"><sup>o</sup>c</h1>
+
+                    <div class="condition">
+                      <img src="" alt="" id="imgCondition" />
+                      <p id="weatherCondition"></p>
+                    </div>
+
+                    <div
+                      class="wave-info d-flex justify-content-between align-items-center"
+                    >
+                      <div class="wave-content">
+                        <img src="images/icon-umberella.png" alt="" />
+                        <span class="text-white-50" id="humidity"></span>
+                      </div>
+
+                      <div class="wave-content">
+                        <img src="images/icon-wind.png" alt="" />
+                        <span class="text-white-50" id="windSpeed"></span>
+                      </div>
+
+                      <div class="wave-content">
+                        <img src="images/icon-compass.png" alt="" />
+                        <span class="text-white-50" id="windDir"></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4">
+                <div class="tomorrow-weather">
+                  <div class="tomorrow-wether-header px-3 py-2">
+                    <span class="text-center d-block" id="nextDay"></span>
+                  </div>
+                  <div class="tomorrow-weather-body px-3 py-4 text-center">
+                    <img src="" alt="" id="nextDayImg" />
+                    <h3 class="text-white fw-bold mt-4" id="nextDayMaxTemp">
+                     
+                    </h3>
+                    <span class="text-white-50" id="nextDayMinTemp"></span>
+
+                    <div class="condition mt-4">
+                      <p id="nextDayCondition"></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4">
+                <div class="after-tomorrow-weather">
+                  <div class="after-tomorrow-weather-header px-3 py-2">
+                    <span class="text-center d-block" id="nextDay2"></span>
+                  </div>
+                  <div
+                    class="after-tomorrow-weather-body px-3 py-4 text-center"
+                  >
+                    <img src="" alt="" id="nextDayImg2" />
+                    <h3 class="text-white fw-bold mt-4" id="nextDayMaxTemp2"></h3>
+                    <span class="text-white-50" id="nextDayMinTemp2"></span>
+
+                    <div class="condition mt-4">
+                      <p id="nextDayCondition2"></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="py-5">
+      <div class="container">
+        <div class="row gy-5">
+          <div class="col-md-8">
+            <div class="footer-form">
+              <input
+                type="email"
+                placeholder="Enter Your Email To Subscribe..."
+              />
+              <button>Subscribe</button>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="footer-icons d-flex jsutify-content-center m-auto">
+              <div class="icon">
+                <i class="fa-brands fa-facebook-f"></i>
+              </div>
+              <div class="icon">
+                <i class="fa-brands fa-twitter"></i>
+              </div>
+              <div class="icon">
+                <i class="fa-brands fa-google-plus-g"></i>
+              </div>
+              <div class="icon">
+                <i class="fa-brands fa-pinterest"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="copy-right mt-4">
+              <p class="">
+                Copyright 2014 Company name. Designed by Themezy. All rights
+                reserved
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
